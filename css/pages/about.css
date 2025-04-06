@@ -1,0 +1,229 @@
+/*
+   About Page Styles
+*/
+.about-page {
+    padding-top: 80px;
+}
+
+.about-hero {
+    background: var(--gradient-twilight);
+    color: var(--light-text);
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero h1 {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.about-hero .subtitle {
+    font-size: var(--font-size-xl);
+    opacity: 0.9;
+}
+
+.about-content {
+    padding: var(--spacing-lg) 0;
+    background: var(--background);
+}
+
+/* Director Section */
+.director-section,
+.production-section,
+.credits-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.director-section h2,
+.production-section h2,
+.credits-section h2 {
+    color: var(--primary-color);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.director-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    padding: var(--spacing-md);
+}
+
+.director-info:hover {
+    transform: translateY(-5px);
+}
+
+.director-text p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+    font-size: var(--font-size-lg);
+}
+
+/* Production Section */
+.production-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.production-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    padding: var(--spacing-md);
+}
+
+.production-card:hover {
+    transform: translateY(-5px);
+}
+
+.production-card h3 {
+    color: var(--accent-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.production-card p {
+    line-height: 1.6;
+}
+
+/* Credits Section */
+.credits-content {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    padding: var(--spacing-md);
+}
+
+.credits-content:hover {
+    transform: translateY(-5px);
+}
+
+.credits-list {
+    list-style: none;
+    margin-bottom: var(--spacing-md);
+}
+
+.credits-list li {
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.credits-list li:last-child {
+    border-bottom: none;
+}
+
+/* Movie Poster Section */
+.movie-poster {
+    background: var(--gradient-twilight);
+    padding: var(--spacing-lg) 0;
+    color: var(--light-text);
+}
+
+.poster-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.poster-image {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.poster-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.poster-info {
+    padding: var(--spacing-md);
+}
+
+.poster-info h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-xs);
+    color: var(--light-text);
+}
+
+.poster-info .japanese-title {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-md);
+    opacity: 0.9;
+}
+
+.poster-details {
+    background: rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-md);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.poster-details p {
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-lg);
+}
+
+.poster-details p:last-child {
+    margin-bottom: 0;
+}
+
+.poster-details strong {
+    color: var(--secondary-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .director-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .production-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .poster-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .poster-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .poster-info {
+        text-align: center;
+        padding: var(--spacing-sm);
+    }
+    
+    .poster-info h2 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .poster-info .japanese-title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .poster-details {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+} 

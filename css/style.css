@@ -1,0 +1,15 @@
+/*
+   Main CSS File - Imports all other CSS files
+*/
+
+/* Base styles and variables */
+@import 'base.css';
+
+/* Layout styles */
+@import 'layout.css';
+
+/* Page-specific styles */
+@import 'pages/home.css';
+@import 'pages/characters.css';
+@import 'pages/plot.css';
+@import 'pages/about.css';

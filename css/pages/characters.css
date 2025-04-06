@@ -1,0 +1,208 @@
+/*
+   Characters Page Styles
+*/
+.characters-page {
+    padding-top: 80px;
+}
+
+.character-hero {
+    background: var(--gradient-twilight);
+    color: var(--light-text);
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+}
+
+.character-hero h1 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-sm);
+}
+
+.character-hero .subtitle {
+    font-size: var(--font-size-lg);
+    opacity: 0.9;
+}
+
+.characters-grid {
+    padding: var(--spacing-lg) 0;
+    background: var(--background);
+}
+
+.character-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    margin-bottom: var(--spacing-md);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+}
+
+.character-images {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    background: #000;
+}
+
+.character-portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transition: var(--transition);
+    opacity: 1;
+}
+
+/* Specific image positioning */
+img[src*="mitsuha-2"],
+img[src*="mitsuha-3"] {
+    object-position: 70% 20%;
+}
+
+img[src*="taki-2"] {
+    object-position: 80% 20%;
+}
+
+.character-portrait:hover {
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.character-portrait:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.character-info {
+    padding: var(--spacing-md);
+    flex: 1;
+}
+
+.character-info h2 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.japanese-name {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--accent-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-lg);
+}
+
+.character-description {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+}
+
+.character-details {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.character-details li {
+    background: var(--background);
+    padding: var(--spacing-sm);
+    border-radius: 8px;
+}
+
+/* Supporting Characters */
+.supporting-characters {
+    background: var(--background);
+    padding: var(--spacing-lg) 0;
+}
+
+.supporting-characters h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    color: var(--primary-color);
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.support-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    padding: var(--spacing-md);
+    text-align: center;
+    overflow: hidden;
+}
+
+.support-card:hover {
+    transform: translateY(-5px);
+}
+
+.support-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.support-portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transition: var(--transition);
+}
+
+.support-card:hover .support-portrait {
+    transform: scale(1.05);
+}
+
+.support-card h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.support-card p {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .character-hero h1 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .character-info {
+        margin-top: 120px;
+    }
+    
+    .character-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .character-images {
+        grid-template-columns: 1fr;
+        height: 300px;
+    }
+    
+    .character-portrait:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    
+    .support-image {
+        height: 150px;
+    }
+} 
